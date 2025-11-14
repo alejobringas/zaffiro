@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flat/Diamantes - Zaffiro</title>
+  <link rel="icon" type="img/logo.png" href="img/logo-pestana32.png" sizes="32x32">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header class="header-total fixed-top">
+  <div class="header">
+
+    <div class="header2">
+      <button class="navbar-toggler d-lg-none border-0 bg-transparent" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#menuNavegacion">
+        <img src="img/menu.png" alt="Menú" class="icon" />
+      </button>
+
+      <div class="search-container">
+  <img src="img/busqueda.png" 
+        alt="Buscar" 
+        class="icon search-toggle"
+        style="cursor:pointer;">
+  <div class="search-box side">
+    <input type="text" placeholder="Buscar..." class="search-input-mini" id="searchInputMini">
+  </div>
+</div>
+
+    </div>
+
+    <div class="header3">
+      <a href="index.html"><img src="img/logo.png" alt="Zaffiro Logo" class="logo" /></a>
+    </div>
+
+    <div class="header4">
+      <a href="login.html"><img src="img/user.png" alt="Usuario" class="icon" /></a>
+      <a href="error.html"><img src="img/carrito.svg" alt="Carrito" class="icon" /></a>
+    </div>
+
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom d-none d-lg-block">
+    <div class="container justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="menuNavegacion" aria-labelledby="menuNavegacionLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="menuNavegacionLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Página de producto individual -->
+<main class="container my-5">
+  <div class="row g-5">
+    <!-- Slider Vertical e Imagen Principal -->
+    <div class="col-md-6">
+      <div class="vertical-slider-container">
+        <div class="vertical-thumbnails" style="overflow-y: visible;">
+          <img src="img/zapato-1.jpg" alt="Vista frontal" class="vertical-thumbnail active" onclick="changeMainImage('img/zapato-1.jpg', this)">
+          <img src="img/zapato-2.jpg" alt="Vista lateral" class="vertical-thumbnail" onclick="changeMainImage('img/zapato-2.jpg', this)">
+          <img src="img/zapato-3.jpg" alt="Vista trasera" class="vertical-thumbnail" onclick="changeMainImage('img/zapato-3.jpg', this)">
+          <img src="img/producto-2.jpg" alt="Vista superior" class="vertical-thumbnail" onclick="changeMainImage('img/producto-2.jpg', this)">
+          <img src="img/zapato-4.jpg" alt="Detalle tacón" class="vertical-thumbnail" onclick="changeMainImage('img/zapato-4.jpg', this)">
+        </div>
+
+        <!-- Imagen Principal  -->
+        <div class="main-image-container">
+          <img id="main-product-image" src="img/producto-2.jpg" alt="Flat/Diamantes - Zaffiro" class="main-product-image cursor-zoom" data-bs-toggle="modal" data-bs-target="#imageModal">
+        </div>
+      </div>
+    </div>
+
+    <!-- Información del Producto -->
+    <div class="col-md-6">
+      <div class="product-info-section">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <div>
+            <h1 class="fw-bold h3">Flat/Diamantes</h1>
+            <p class="text-muted mb-2">Código: FLT-2025-DM</p>
+          </div>
+          <div class="text-end">
+            <span class="badge bg-success">En stock</span>
+          </div>
+        </div>
+
+        <!-- Precio-->
+        <div class="price-section">
+          <div class="d-flex align-items-center mb-2">
+            <h2 class="fw-bold text-danger mb-0 me-3">$78.999</h2>
+            <span class="discount-badge">28% OFF</span>
+          </div>
+          <p class="text-decoration-line-through text-muted mb-2">Precio original: $110.999</p>
+          <p class="text-success mb-0 fw-semibold">¡Ahorras $32.000!</p>
+        </div>
+
+        <!-- Descripción -->
+        <div class="mb-4">
+          <p class="mb-3">
+            Tacón de aguja con plataforma, elaborado en material negro satinado y napa metálica dorada.
+            Importante y sensual, combina una silueta de múltiples tiras frontales entrelazadas con una
+            producción de pedrería y cristales brillantes.
+          </p>
+          <div class="d-flex gap-3 text-center">
+            <div>
+              <small class="d-block text-muted">Material</small>
+              <strong>Sintético Premium</strong>
+            </div>
+            <div>
+              <small class="d-block text-muted">Tacón</small>
+              <strong>10 cm</strong>
+            </div>
+            <div>
+              <small class="d-block text-muted">Plataforma</small>
+              <strong>2 cm</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selector de Talle -->
+        <div class="mb-4">
+          <h6 class="fw-bold mb-3">Selecciona tu talle</h6>
+          <div class="size-selector d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark">34</button>
+            <button class="btn btn-outline-dark">35</button>
+            <button class="btn btn-outline-dark active">36</button>
+            <button class="btn btn-outline-dark">37</button>
+            <button class="btn btn-outline-dark">38</button>
+            <button class="btn btn-outline-dark">39</button>
+            <button class="btn btn-outline-dark">40</button>
+          </div>
+          <div class="mt-2">
+            <small class="text-muted">¿No sabés tu talle? <a href="#" class="text-decoration-none">Guía de talles</a></small>
+          </div>
+        </div>
+
+        <!-- Botón de Compra -->
+        <button class="btn add-to-cart-btn w-100 py-3 mb-4 d-flex align-items-center justify-content-center gap-3 text-white">
+          <img src="img/carrito.svg" alt="Carrito" width="20" height="20" style="filter: invert(1);">
+          <span>AGREGAR AL CARRITO</span>
+        </button>
+        <div class="row text-center g-3 mb-4">
+  <div class="col-4 d-flex flex-column align-items-center">
+    <img src="img/envios.svg" alt="Envío" width="30" class="mb-2">
+    <small>Envío gratis</small>
+  </div>
+
+  <div class="col-4 d-flex flex-column align-items-center">
+    <img src="img/tarjeta.svg" alt="Cuotas" width="30" class="mb-2">
+    <small>6 cuotas sin interés</small>
+  </div>
+
+  <div class="col-4 d-flex flex-column align-items-center">
+    <img src="img/transferencia.svg" alt="Descuento" width="30" class="mb-2">
+    <small>10% off transferencia</small>
+  </div>
+</div>
+
+        <!-- Acordeón-->
+        <div class="accordion custom-accordion" id="productAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDetails">
+                Detalles del Producto
+              </button>
+            </h2>
+            <div id="collapseDetails" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-6">
+                    <strong>Material:</strong> Sintético premium<br>
+                    <strong>Forro:</strong> Cuero ecológico<br>
+                    <strong>Suela:</strong> Goma antideslizante
+                  </div>
+                  <div class="col-6">
+                    <strong>Altura tacón:</strong> 10 cm<br>
+                    <strong>Plataforma:</strong> 2 cm<br>
+                    <strong>Cierre:</strong> Hebilla ajustable
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCare">
+                Cuidados y Mantenimiento
+              </button>
+            </h2>
+            <div id="collapseCare" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+              <div class="accordion-body">
+                <ul class="mb-0">
+                  <li>Limpiar con paño suave y seco</li>
+                  <li>No exponer directamente al sol por largos periodos</li>
+                  <li>Evitar contacto con agua y productos químicos</li>
+                  <li>Guardar en bolsa de tela para mantener el brillo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping">
+                Envíos y Devoluciones
+              </button>
+            </h2>
+              <div id="collapseShipping" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+              <div class="accordion-body">
+                <strong>Envío gratis</strong> en compras superiores a $25.000<br>
+                <strong>Tiempo de entrega:</strong> 3-5 días hábiles<br>
+                <strong>Devoluciones:</strong> 30 días para cambio o devolución<br>
+                <strong>Cambios:</strong> Gratis en tienda física
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Productos Relacionados -->
+  <section class="related-products">
+    <h3 class="fw-bold mb-4 text-center">Productos que también te pueden gustar</h3>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <a href="compra.html"><img src="img/producto-1.jpg" class="card-img-top" alt="UTAH Marron" /></a>
+          <div class="card-body text-center">
+            <h5 class="card-title">UTAH/Marron</h5>
+            <p class="text-muted text-decoration-line-through">$129.999</p>
+            <p class="fw-bold text-danger">$99.999</p>
+            <p class="small">6 cuotas sin interés <br /><span class="fw-bold">$21.667</span></p>
+            <a href="compra.html" class="btn btn-dark w-100">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm"><a href="compra.html"><img src="img/producto-2.jpg" class="card-img-top" alt="Flat/Diamantes" /></a><div class="card-body text-center"><h5 class="card-title">Flat/Diamantes</h5><p class="text-muted text-decoration-line-through">$110.999</p><p class="fw-bold text-danger">$78.999</p><p class="small">3 cuotas sin interés <br /><span class="fw-bold">$26.333</span></p><a href="compra.html" class="btn btn-dark w-100">Comprar</a></div></div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm"><a href="compra.html"><img src="img/producto-3.jpg" class="card-img-top" alt="Flat/COHOC" /></a><div class="card-body text-center"><h5 class="card-title">Flat/Diamantes</h5><p class="text-muted text-decoration-line-through">$110.999</p><p class="fw-bold text-danger">$78.999</p><p class="small">3 cuotas sin interés <br /><span class="fw-bold">$26.333</span></p><a href="compra.html" class="btn btn-dark w-100">Comprar</a></div></div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm"><a href="compra.html"><img src="img/producto-4.jpg" class="card-img-top" alt="Flat/Black" /></a><div class="card-body text-center"><h5 class="card-title">Flat/Diamantes</h5><p class="text-muted text-decoration-line-through">$110.999</p><p class="fw-bold text-danger">$78.999</p><p class="small">3 cuotas sin interés <br /><span class="fw-bold">$26.333</span></p><a href="compra.html" class="btn btn-dark w-100">Comprar</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal actualizado con flechas -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content modal-image-content position-relative">
+      <button type="button" class="btn-close ms-auto me-2 mt-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+      <!-- Flechas -->
+      <button id="prevImage" class="arrow-btn left-arrow" type="button" aria-label="Anterior">&#10094;</button>
+
+      <div class="ratio ratio-1x1 ratio-md-4x3">
+        <img id="modalProductImage" src="img/producto-2.jpg" alt="Zoom producto" class="img-fluid modal-product-image">
+      </div>
+
+      <button id="nextImage" class="arrow-btn right-arrow" type="button" aria-label="Siguiente">&#10095;</button>
+    </div>
+  </div>
+</div>
+    <div class="text-center mt-4">
+  <a href="productos.html" class="btn btn-dark px-4 py-2 boton-vermas">
+    Ver más productos
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-section">
+        <h3>Recibe nuestras OFERTAS!</h3>
+        <input type="email" placeholder="Email">
+        <div class="social-icons">
+        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <h3>CATEGORÍAS</h3>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Quienes somos</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>CONTACTANOS</h3>
+        <p>+54 2645061628</p>
+        <p>TEL: 47837934 / CEL: 11238977</p>
+        <p>zaffirozapateria@gmail.com</p>
+        <p>Av. Libertador 1582, San Juan</p>
+    </div>
+</footer>
+<script>
+  function changeMainImage(newImageSrc, clickedThumbnail) {
+    const mainImage = document.getElementById('main-product-image');
+    const modalImage = document.getElementById('modalProductImage');
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+      mainImage.src = newImageSrc;
+      modalImage.src = newImageSrc;
+      mainImage.style.opacity = '1';
+    }, 200);
+
+    const thumbnails = document.querySelectorAll('.vertical-thumbnail');
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    clickedThumbnail.classList.add('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const thumbnails = Array.from(document.querySelectorAll('.vertical-thumbnail'));
+    const modalImage = document.getElementById('modalProductImage');
+    const mainImage = document.getElementById('main-product-image');
+    let currentIndex = thumbnails.findIndex(t => t.classList.contains('active'));
+
+    function showImage(index) {
+      if (index < 0) index = thumbnails.length - 1;
+      if (index >= thumbnails.length) index = 0;
+      const newSrc = thumbnails[index].getAttribute('src');
+      modalImage.src = newSrc;
+      mainImage.src = newSrc;
+      thumbnails.forEach(t => t.classList.remove('active'));
+      thumbnails[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    document.getElementById('prevImage').addEventListener('click', () => showImage(currentIndex - 1));
+    document.getElementById('nextImage').addEventListener('click', () => showImage(currentIndex + 1));
+
+    document.getElementById('imageModal').addEventListener('show.bs.modal', () => {
+      currentIndex = thumbnails.findIndex(t => t.classList.contains('active'));
+    });
+  });
+    const toggle = document.querySelector('.search-toggle');
+  const box = document.querySelector('.search-box');
+  const input = document.getElementById('searchInputMini');
+
+  toggle.addEventListener('click', () => {
+    const isVisible = box.style.display === 'block';
+
+    box.style.display = isVisible ? 'none' : 'block';
+
+    if (!isVisible) {
+      setTimeout(() => input.focus(), 50); 
+    }
+  });
+
+
+  document.addEventListener('click', (e) => {
+    if (!document.querySelector('.search-container').contains(e.target)) {
+      box.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
