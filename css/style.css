@@ -356,6 +356,18 @@ img, iframe {
   background: #111;
 }
 
+.filtro:focus,
+.filtro:active {
+  color: #000 !important;        /* Texto negro */
+  background: #fff !important;   /* Fondo blanco */
+  outline: none !important;
+  box-shadow: none !important;
+}
+.filtro.active {
+  background: #000 !important;
+  color: #fff !important;
+}
+
 
 .footer input[type="email"] {
   width: 100%;
