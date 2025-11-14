@@ -289,7 +289,7 @@ img, iframe {
     width: 100%;
 }
 .error-body {
-  background: linear-gradient(135deg, #f8f8f8, #efefef);
+  background: linear-gradient(135deg, #ffffff, #ffffff);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,8 +358,8 @@ img, iframe {
 
 .filtro:focus,
 .filtro:active {
-  color: #000 !important;        /* Texto negro */
-  background: #fff !important;   /* Fondo blanco */
+  color: #000 !important; 
+  background: #fff !important;  
   outline: none !important;
   box-shadow: none !important;
 }
