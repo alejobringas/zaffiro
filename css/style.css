@@ -541,6 +541,14 @@ img, iframe {
   overflow: hidden;
 }
 
+.guide-link {
+    color: green !important;
+}
+
+.guide-link:hover {
+    color: darkgreen !important;
+}
+
 .custom-accordion .accordion-button {
   background-color: #000;
   color: #fff;
